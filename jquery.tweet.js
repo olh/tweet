@@ -8,7 +8,7 @@
       intro_text: null,                       // [string]   do you want text BEFORE your your tweets?
       outro_text: null,                       // [string]   do you want text AFTER your tweets?
       join_text:  null,                       // [string]   optional text in between date and tweet, try setting to "auto"
-      auto_join_text_default: "disse:",      // [string]   auto text for non verb: "i said" bullocks
+      auto_join_text_default: "comentei: ",      // [string]   auto text for non verb: "i said" bullocks
       auto_join_text_ed: "eu",                 // [string]   auto text for past tense: "i" surfed
       auto_join_text_ing: "estava",             // [string]   auto tense for present tense: "i was" surfing
       auto_join_text_reply: "respondi para",   // [string]   auto tense for replies: "i replied to" @someone "with"
