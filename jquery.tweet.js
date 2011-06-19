@@ -2,17 +2,17 @@
  
   $.fn.tweet = function(o){
     var s = {
-      username: ["seaofclouds"],              // [string]   required, unless you want to display our tweets. :) it can be an array, just do ["username1","username2","etc"]
+      username: ["olh"],              // [string]   required, unless you want to display our tweets. :) it can be an array, just do ["username1","username2","etc"]
       avatar_size: null,                      // [integer]  height and width of avatar if displayed (48px max)
       count: 3,                               // [integer]  how many tweets to display?
       intro_text: null,                       // [string]   do you want text BEFORE your your tweets?
       outro_text: null,                       // [string]   do you want text AFTER your tweets?
       join_text:  null,                       // [string]   optional text in between date and tweet, try setting to "auto"
-      auto_join_text_default: "i said,",      // [string]   auto text for non verb: "i said" bullocks
-      auto_join_text_ed: "i",                 // [string]   auto text for past tense: "i" surfed
-      auto_join_text_ing: "i am",             // [string]   auto tense for present tense: "i was" surfing
-      auto_join_text_reply: "i replied to",   // [string]   auto tense for replies: "i replied to" @someone "with"
-      auto_join_text_url: "i was looking at", // [string]   auto tense for urls: "i was looking at" http:...
+      auto_join_text_default: "disse:",      // [string]   auto text for non verb: "i said" bullocks
+      auto_join_text_ed: "eu",                 // [string]   auto text for past tense: "i" surfed
+      auto_join_text_ing: "estava",             // [string]   auto tense for present tense: "i was" surfing
+      auto_join_text_reply: "respondi para",   // [string]   auto tense for replies: "i replied to" @someone "with"
+      auto_join_text_url: "estava olhando", // [string]   auto tense for urls: "i was looking at" http:...
       loading_text: null,                     // [string]   optional loading text, displayed while tweets load
       query: null                             // [string]   optional search query
     };
@@ -70,19 +70,19 @@
       var relative_to = (arguments.length > 1) ? arguments[1] : new Date();
       var delta = parseInt((relative_to.getTime() - parsed_date) / 1000);
       if(delta < 60) {
-      return 'less than a minute ago';
+      return 'menos de um minuto atrás';
       } else if(delta < 120) {
-      return 'about a minute ago';
+      return 'há um minuto';
       } else if(delta < (45*60)) {
-      return (parseInt(delta / 60)).toString() + ' minutes ago';
+      return (parseInt(delta / 60)).toString() + ' minutos atrás';
       } else if(delta < (90*60)) {
-      return 'about an hour ago';
+      return 'há uma hora atrás';
       } else if(delta < (24*60*60)) {
-      return 'about ' + (parseInt(delta / 3600)).toString() + ' hours ago';
+      return 'há ' + (parseInt(delta / 3600)).toString() + ' horas atrás';
       } else if(delta < (48*60*60)) {
-      return '1 day ago';
+      return '1 dia atrás';
       } else {
-      return (parseInt(delta / 86400)).toString() + ' days ago';
+      return (parseInt(delta / 86400)).toString() + ' dias atrás';
       }
     }
 
