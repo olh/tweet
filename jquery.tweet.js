@@ -13,11 +13,11 @@
       intro_text: null,                         // [string]   do you want text BEFORE your your tweets?
       outro_text: null,                         // [string]   do you want text AFTER your tweets?
       join_text:  null,                         // [string]   optional text in between date and tweet, try setting to "auto"
-      auto_join_text_default: "i said,",        // [string]   auto text for non verb: "i said" bullocks
-      auto_join_text_ed: "i",                   // [string]   auto text for past tense: "i" surfed
-      auto_join_text_ing: "i am",               // [string]   auto tense for present tense: "i was" surfing
-      auto_join_text_reply: "i replied to",     // [string]   auto tense for replies: "i replied to" @someone "with"
-      auto_join_text_url: "i was looking at",   // [string]   auto tense for urls: "i was looking at" http:...
+      auto_join_text_default: "comentei: ",        // [string]   auto text for non verb: "i said" bullocks
+      auto_join_text_ed: "eu",                   // [string]   auto text for past tense: "i" surfed
+      auto_join_text_ing: "eu estou",               // [string]   auto tense for present tense: "i was" surfing
+      auto_join_text_reply: "respondi para",     // [string]   auto tense for replies: "i replied to" @someone "with"
+      auto_join_text_url: "estava checando",   // [string]   auto tense for urls: "i was looking at" http:...
       loading_text: null,                       // [string]   optional loading text, displayed while tweets load
       refresh_interval: null ,                  // [integer]  optional number of seconds after which to reload tweets
       twitter_url: "twitter.com",               // [string]   custom twitter url, if any (apigee, etc.)
@@ -159,7 +159,7 @@
       o.join = s.join_text ? t(' <span class="tweet_join">{join_text}</span> ', o) : ' ';
       o.avatar = o.avatar_size ?
         t('<a class="tweet_avatar" href="{user_url}"><img src="{avatar_url}" height="{avatar_size}" width="{avatar_size}" alt="{screen_name}\'s avatar" title="{screen_name}\'s avatar" border="0"/></a>', o) : '';
-      o.time = t('<span class="tweet_time"><a href="{tweet_url}" title="view tweet on twitter">{tweet_relative_time}</a></span>', o);
+      o.time = t('<span class="tweet_time"><a href="{tweet_url}" title="ver no twitter">{tweet_relative_time}</a></span>', o);
       o.text = t('<span class="tweet_text">{tweet_text_fancy}</span>', o);
       o.reply_action = t('<a class="tweet_action tweet_reply" href="{reply_url}">reply</a>', o);
       o.retweet_action = t('<a class="tweet_action tweet_retweet" href="{retweet_url}">retweet</a>', o);
